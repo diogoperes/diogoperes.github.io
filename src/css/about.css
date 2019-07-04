@@ -1,0 +1,128 @@
+.second-section {
+  background: #ffffff;
+  height: auto;
+}
+
+.second-section .section-title {
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.company-name {
+  color: rgb(246, 82, 52);
+  font-weight: 400;
+}
+
+.second-section .text {
+  margin-bottom: 2px;
+  color: #424242;
+}
+
+.second-section .skillsTable {
+  padding-top: 25px;
+  list-style-type: none;
+  padding-left: 0;
+}
+.second-section .skillsTable>li {
+  position: relative;
+  margin-bottom: 35px;
+  background: #dedede;
+  height: 4px;
+  border-radius: 3px;
+  /* border: 1px solid #bbb; */
+}
+.second-section .skillsTable em {
+  font-size: 15px;
+  position: relative;
+  top: -26px;
+  font-weight: 600;
+}
+.second-section .skillsTable span {
+  height: 6px;
+  top: -1px;
+  background: #093575;
+  border: 1px solid #002b69;
+  position: absolute;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.second-section .item {
+  color: #616161;
+}
+
+.second-section .item-title {
+  font-weight: 400;
+  text-align: center;
+}
+
+.skillBarContainer {
+  position: relative;
+}
+
+.second-section .skill.animated {
+  width:100%;
+  animation:animateSkill 2s ease-out;
+}
+
+@keyframes animateSkill {
+  0%  { width:0px;}
+  100%{ width:100%;}
+}
+
+.tools-list {
+  padding-top: 15px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tools-list li {
+  text-align: center;
+  border: 1px solid #d6dfec;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #616161;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+  max-width: 300px;
+}
+
+.tools-list li.animatable{
+	opacity: 0;
+  transform: translateY(-20px);
+}
+.tools-list li.animated{
+	opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  /* animation:fadeInDown 1s ease-out; */
+}
+.tools-list li.animated:nth-child(2){
+  transition-delay: 0.2s;
+}
+.tools-list li.animated:nth-child(3){
+  transition-delay: 0.4s;
+}
+.tools-list li.animated:nth-child(4){
+  transition-delay: 0.6s;
+}
+.tools-list li.animated:nth-child(5){
+  transition-delay: 0.8s;
+}
+.tools-list li.animated:nth-child(6){
+  transition-delay: 1s;
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

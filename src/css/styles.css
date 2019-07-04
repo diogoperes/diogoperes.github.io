@@ -1,0 +1,76 @@
+html {
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Open sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.section {
+  position: relative;
+}
+
+.first-section {
+  background: #093575;
+  height: 100vh;
+}
+
+/* .second-section .item .icon {
+  font-size: 25px;
+} */
+/* https://www.pexels.com/photo/low-angle-shot-of-rock-formation-1366909/ */
+.third-section {
+  background: #0ff;
+  background-image: url(../assets/img/mountain.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fourth-section {
+  height: 100vh;
+}
+
+.fifth-section {
+  height: 100vh;
+  background: #f00;
+}
+
+/* FIRST SECTION */
+.hero-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  color: #fff;
+  font-weight: 300;
+  width: 540px;
+  max-width: 100%;
+  text-align: left;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  padding: 0px 15px;
+}
+
+.hero-content .name {
+  font-size: 36px;
+}
+.hero-content p{
+  margin-bottom: 0;
+  display: inline-block;
+  white-space: pre;
+}
+.hero-content .name p:last-child {
+  margin-bottom: 10px;
+}
+
+#particles-js {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
