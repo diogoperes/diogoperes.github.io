@@ -11,6 +11,7 @@ html, body {
 
 .section {
   position: relative;
+  overflow: hidden;
 }
 
 .first-section {
