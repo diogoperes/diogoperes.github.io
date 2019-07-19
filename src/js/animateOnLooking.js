@@ -14,8 +14,16 @@ jQuery(function($) {
 
     // Check all animatables and animate them if necessary
 		$animatables.each(function(i) {
-       var $animatable = $(this);
-			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+		  var $animatable = $(this);
+		  var innerWidth = window.innerWidth;
+      var heightToAppear;
+		  if(innerWidth < 770) {
+        heightToAppear = $animatable.height() / 2;
+      }else {
+        heightToAppear = $animatable.height();
+      }
+
+			if (($animatable.offset().top + heightToAppear - 20) < offset) {
         $animatable.removeClass('animatable').addClass('animated');
 			}
     });

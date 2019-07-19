@@ -85,10 +85,10 @@ header {
   background: #525252;
 }
 
-.nav>.nav-inner>.nav-links>a:hover {
-  /* background-color: rgba(0, 0, 0, 0.3); */
-  color: #6f6f6f;
-}
+  /*.nav>.nav-inner>.nav-links>a:hover {*/
+    /*!* background-color: rgba(0, 0, 0, 0.3); *!*/
+    /*color: #6f6f6f;*/
+  /*}*/
 
 .nav-inner>#nav-check {
   display: none;
@@ -122,7 +122,8 @@ header {
   }
 
   .nav>.nav-inner>.nav-btn>label:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+    cursor: pointer;
   }
 
   .nav>.nav-inner>.nav-btn>label>span {

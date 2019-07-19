@@ -24,7 +24,7 @@ html, body {
 } */
 /* https://www.pexels.com/photo/low-angle-shot-of-rock-formation-1366909/ */
 .third-section {
-  background: #0ff;
+  background: #fff;
   background-image: url(../assets/img/mountain.jpg);
   background-attachment: fixed;
   background-position: center;
@@ -38,21 +38,18 @@ html, body {
 
 .fifth-section {
   height: 100vh;
-  background: #f00;
 }
 
 /* FIRST SECTION */
 .hero-content {
   position: relative;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 0;
   color: #fff;
   font-weight: 300;
-  width: 540px;
   max-width: 100%;
-  text-align: left;
+  text-align: center;
   letter-spacing: 8px;
   text-transform: uppercase;
   padding: 0px 15px;
@@ -61,13 +58,50 @@ html, body {
 .hero-content .name {
   font-size: 36px;
 }
-.hero-content p{
+
+.hero-content p {
   margin-bottom: 0;
   display: inline-block;
   white-space: pre;
 }
 .hero-content .name p:last-child {
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 720px) {
+  #myFunction {
+    font-size: 30px;
+  }
+  #welcomePhrase {
+    font-size: 40px;
+  }
+  #myName {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 719px) {
+  #myFunction {
+    font-size: 20px;
+  }
+  #welcomePhrase {
+    font-size: 30px;
+  }
+  #myName {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #myFunction {
+    font-size: 14px;
+  }
+  #welcomePhrase {
+    font-size: 18px;
+  }
+  #myName {
+    font-size: 22px;
+  }
 }
 
 #particles-js {

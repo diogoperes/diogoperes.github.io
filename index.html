@@ -15,6 +15,8 @@
   <link href="./src/css/portfolio.css" rel="stylesheet">
   <link href="./src/css/contact.css" rel="stylesheet">
 
+  <link href="./src/css/thirdParty/typeWriter.css" rel="stylesheet">
+
 
 </head>
 
@@ -47,14 +49,23 @@
     </div>
   </header>
 
+  <!--<section id="first-section" class="section first-section">-->
+    <!--<div id="particles-js"></div>-->
+    <!--<div class="hero-content">-->
+      <!--<div class="name text-wrap">-->
+        <!--<p>Hi, </p>-->
+        <!--<p>I'm Diogo </p>-->
+      <!--</div>-->
+      <!--<div class="text text-wrap"> Web developer </div>-->
+    <!--</div>-->
+  <!--</section>-->
+
   <section id="first-section" class="section first-section">
     <div id="particles-js"></div>
     <div class="hero-content">
-      <div class="name text-wrap">
-        <p>Hi, </p>
-        <p>I'm Diogo </p>
-      </div>
-      <div class="text text-wrap"> Web developer </div>
+      <div class="hero-text-container"><p id="welcomePhrase" class="typewriter-cursor removeAtEnd"></p></div>
+      <div class="hero-text-container"><p id="myName" class="typewriter-cursor removeAtEnd"></p></div>
+      <div class="hero-text-container"><p id="myFunction" class="typewriter-cursor removeAtEnd"></p></div>
     </div>
   </section>
 
@@ -293,6 +304,8 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="./src/js/navBar.js"></script>
+<script src="./src/js/hero.js"></script>
+<script src="./src/js/thirdParty/typeWriter.js"></script>
 <script src="./src/js/thirdParty/particles.js"></script>
 <script src="./src/js/particlesLoader.js"></script>
 <script src="./src/js/animateOnLooking.js"></script>
