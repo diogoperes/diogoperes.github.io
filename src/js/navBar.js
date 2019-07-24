@@ -44,6 +44,10 @@ $(document).ready(function() {
   });
 
   function checkSectionSelected() {
+    if(window.innerWidth < 600) {
+      return;
+    }
+
     let sections = $('section');
     let previousSelected = $("a.active");
 
