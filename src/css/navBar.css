@@ -15,6 +15,7 @@ header {
 .nav.scrolled {
   height: 50px;
   background-color: #ffffff;
+  box-shadow: 0px 0px 5px 1px #00000038;
 }
 
 .nav-inner {
@@ -85,10 +86,10 @@ header {
   background: #525252;
 }
 
-.nav>.nav-inner>.nav-links>a:hover {
-  /* background-color: rgba(0, 0, 0, 0.3); */
-  color: #6f6f6f;
-}
+  /*.nav>.nav-inner>.nav-links>a:hover {*/
+    /*!* background-color: rgba(0, 0, 0, 0.3); *!*/
+    /*color: #6f6f6f;*/
+  /*}*/
 
 .nav-inner>#nav-check {
   display: none;
@@ -98,6 +99,16 @@ header {
   .nav>.nav-inner {
     min-width: unset;
     width: 100%;
+  }
+
+  .nav.opened {
+    background: #ffffff;
+  }
+  .nav.opened .nav-header {
+    color: #424242;
+  }
+  .nav.opened>.nav-inner>.nav-btn>label>span {
+    border-top: 2px solid #424242;;
   }
 
   .nav>.nav-inner>.nav-btn {
@@ -113,7 +124,7 @@ header {
     height: 50px;
     padding: 13px;
     margin-right: 7px;
-    margin-top: 17px;
+    margin-top: 12px;
     transition: 0.5s ease;
   }
 
@@ -122,19 +133,41 @@ header {
   }
 
   .nav>.nav-inner>.nav-btn>label:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+    cursor: pointer;
   }
 
   .nav>.nav-inner>.nav-btn>label>span {
+    position: absolute;
     display: block;
-    width: 25px;
-    height: 10px;
+    width: 24px;
+    height: 0;
     border-top: 2px solid #ffffff;
+    opacity: 1;
     transition: 0.5s ease;
+    margin-top: 13px;
+  }
+  .nav>.nav-inner>.nav-btn>label>span:nth-child(1) {
+    margin-top: 5px;
+  }
+  .nav>.nav-inner>.nav-btn>label>span:nth-child(3) {
+    margin-top: 21px;
   }
 
   .nav.scrolled>.nav-inner>.nav-btn>label>span {
     border-top: 2px solid #424242;;
+  }
+
+  .nav.opened>.nav-inner>.nav-btn>label>span:nth-child(1) {
+    transform: rotate(-225deg);
+    margin-top: 13px;
+  }
+  .nav.opened>.nav-inner>.nav-btn>label>span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav.opened>.nav-inner>.nav-btn>label>span:nth-child(3) {
+    transform: rotate(225deg);
+    margin-top: 13px;
   }
 
   .nav>.nav-inner>.nav-links {
@@ -165,21 +198,23 @@ header {
     color: #efefef;
   }
 
-  .nav-inner>#nav-check:not(:checked)+.nav-links {
+  .nav .nav-links {
     height: 0px;
   }
 
-  .nav-inner>#nav-check:checked+.nav-links {
+  .nav.opened .nav-links {
     height: calc(100vh - 80px);
     overflow-y: hidden;
   }
 
-  .nav.scrolled>.nav-inner>#nav-check:checked+.nav-links {
+  .nav.scrolled.opened .nav-links {
     height: calc(100vh - 50px);
   }
 
   .section-selected-border {
     display: none;
   }
+
+
 
 }
