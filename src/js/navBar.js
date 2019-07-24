@@ -17,6 +17,20 @@ $(document).ready(function() {
     checkSectionSelected();
   });
 
+  $("#nav-btn").click(clickHandler);
+
+  var isMenuOpen = false;
+  function clickHandler() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      $('#nav').addClass('opened');
+    } else {
+      $('#nav').removeClass('opened');
+    }
+
+  }
+
+  $(".nav-links   a").click(clickHandler);
 
   //nav underline
   var materialNav = $('.nav-inner');
@@ -36,12 +50,6 @@ $(document).ready(function() {
       .find(".section-selected-border")
       .css('left', leftPosition + 'px');
   }
-
-  materialNav.find('a').click(function(e) {
-    if($('#nav-check').is(":checked")) {
-      $('#nav-check').prop( "checked", false );
-    }
-  });
 
   function checkSectionSelected() {
     if(window.innerWidth < 600) {
