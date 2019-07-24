@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var speed = 80;
+  var speed = 70;
   var pausebetweenWords = 500;
 
   new Typewriter('welcomePhrase', {
@@ -14,10 +14,10 @@ $(document).ready(function() {
 
   setTimeout(() => new Typewriter('myFunction', {
     words: ['Web Developer', 'Game Enthusiast', 'Music Lover'],
-    speed : 170,
+    speed : 100,
     loop  : true,
     delay_at_end : 3000,
-    delete_type_diff : 150,
+    delete_type_diff : 70,
     pause_between_words_speed: 1500
   }), (speed * 23) + pausebetweenWords * 2)
 
