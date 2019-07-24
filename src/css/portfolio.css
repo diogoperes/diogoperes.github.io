@@ -137,6 +137,40 @@
   }
 }
 
+@media (max-width: 576px) {
+  .fourth-section .project:nth-child(odd) .project-desc-container.animated {
+    animation: fadeInRight 0.5s ease-out;
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translate(50%, -50%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
+  }
+
+  .fourth-section .project:nth-child(even) .project-desc-container.animated {
+    animation: fadeInLeft 0.5s ease-out;
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
 /* @media (min-width: 768px) {
   .pull-right-sm {
     float: right !important;
