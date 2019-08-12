@@ -1,0 +1,26 @@
+.typewriter-cursor {
+    display: inline-block;
+    position: relative;
+}
+
+.typewriter-cursor:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top:    0;
+    bottom: 0;
+    right:  -8px;
+    width:  3px;
+    background: #fff;
+    animation: blinkTextCursor 1s linear infinite;
+}
+
+@keyframes lineToNothing {
+    0%   { background: #fff; }
+    100% { background: transparent; }
+}
+
+@keyframes blinkTextCursor{
+    0%   { background: #fff; }
+    100% { background: transparent; }
+}
