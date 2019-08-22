@@ -109,3 +109,18 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+.popover-default {
+  background: #1c1c1c;
+}
+.popover-default.bs-popover-auto[x-placement^=bottom] .arrow::after, .popover-default.bs-popover-bottom .arrow::after  {
+  border-bottom-color: #1c1c1c;
+}
+.bs-popover-auto[x-placement^=bottom]>.arrow::before, .bs-popover-bottom>.arrow::before {
+  top: 0;
+  border-width: 0 .5rem .5rem .5rem;
+  border-bottom-color: transparent;
+}
+.popover-default .popover-body {
+  color: #fff;
+}
