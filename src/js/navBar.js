@@ -13,10 +13,6 @@ $(document).ready(function() {
     }
   });
 
-  $(window).on('resize', function() {
-    checkSectionSelected();
-  });
-
   $("#nav-btn").click(clickHandler);
 
   var isMenuOpen = false;
@@ -32,8 +28,14 @@ $(document).ready(function() {
 
   $(".nav-links   a").click(clickHandler);
 
+
+  //   UNDELINE
   //nav underline
   var materialNav = $('.nav-inner');
+
+  $(window).on('resize', function() {
+    checkSectionSelected();
+  });
 
   function setBorderWidth() {
     var itemWidth = materialNav.find('.active').width();
