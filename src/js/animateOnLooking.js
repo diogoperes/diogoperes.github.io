@@ -1,12 +1,13 @@
 jQuery(function($) {
 
   var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+  var elementWithScroll = '#sections';
 
   if(!!supportsTouch) {
     var $removeAnimations = $('.dontAnimateOnTouch');
     $removeAnimations.css("animation", "none");
     $removeAnimations.removeClass('animatable').addClass('animated');
-    console.log('oiadosaid')
+    // console.log('oiadosaid')
 
     $('body').addClass('touchDevice');
 
@@ -16,12 +17,12 @@ jQuery(function($) {
   var doAnimations = function() {
 
     // Calc current offset and get all animatables
-    var offset = $(window).scrollTop() + $(window).height(),
+    var offset = $(elementWithScroll).scrollTop() + $(elementWithScroll).height(),
         $animatables = $('.animatable');
 
     // Unbind scroll handler if we have no animatables
     if ($animatables.length == 0) {
-      $(window).off('scroll', doAnimations);
+      $(elementWithScroll).off('scroll', doAnimations);
     }
 
     // Check all animatables and animate them if necessary
@@ -35,7 +36,7 @@ jQuery(function($) {
         heightToAppear = $animatable.height();
       }
 
-			if (($animatable.offset().top + heightToAppear - 20) < offset) {
+			if (($animatable.offset().top + heightToAppear - 20) < $(elementWithScroll).height()) {
         $animatable.removeClass('animatable').addClass('animated');
 			}
     });
@@ -43,7 +44,7 @@ jQuery(function($) {
 	};
 
   // Hook doAnimations on scroll, and trigger a scroll
-	$(window).on('scroll', doAnimations);
+	$(elementWithScroll).on('scroll', doAnimations);
 
   //optimize scroll
   // var waiting = false, endScrollHandle;
@@ -70,6 +71,6 @@ jQuery(function($) {
   // });
 
 
-  $(window).trigger('scroll');
+  $(elementWithScroll).trigger('scroll');
 
 });

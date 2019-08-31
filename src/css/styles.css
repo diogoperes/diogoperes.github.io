@@ -7,6 +7,13 @@ html, body {
   margin: 0;
   font-family: 'Open sans', sans-serif;
   scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+#sections {
+  height: 100%;
+  overflow: auto;
+  position: relative;
 }
 
 .section {

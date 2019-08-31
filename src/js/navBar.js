@@ -1,12 +1,15 @@
 $(document).ready(function() {
-  if (Math.round($(window).scrollTop()) > 100) {
+
+  var elementWithScroll = '#sections';
+
+  if (Math.round($(elementWithScroll).scrollTop()) > 100) {
     $('.nav').addClass('scrolled');
   }
 
   //verify section selected and update underline accordingly
-  $(window).on('scroll', function() {
+  $(elementWithScroll).on('scroll', function() {
     checkSectionSelected();
-    if (Math.round($(window).scrollTop()) > 100) {
+    if (Math.round($(elementWithScroll).scrollTop()) > 100) {
       $('.nav').addClass('scrolled');
     } else {
       $('.nav').removeClass('scrolled');
@@ -33,7 +36,7 @@ $(document).ready(function() {
   //nav underline
   var materialNav = $('.nav-inner');
 
-  $(window).on('resize', function() {
+  $(elementWithScroll).on('resize', function() {
     checkSectionSelected();
   });
 
@@ -64,7 +67,8 @@ $(document).ready(function() {
     for (var i = 0; i < sections.length; i++) {
       let sectionTop = $(sections[i]).position().top;
       let sectionBottom = sectionTop + $(sections[i]).height();
-      let userLookingPosition = $(window).scrollTop() + window.innerHeight / 2;
+      // let userLookingPosition = $(elementWithScroll).scrollTop() + window.innerHeight / 2;
+      let userLookingPosition = (window.innerHeight * 2) / 3 ;
       //section with focus
       if (userLookingPosition >= sectionTop && userLookingPosition <= sectionBottom) {
         let aSelected = $("a[href='#" + $(sections[i])[0].id + "']");

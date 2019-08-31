@@ -21,13 +21,4 @@ $(document).ready(function() {
     pause_between_words_speed: 1500
   }), (speed * 23) + pausebetweenWords * 2)
 
-  $('[data-toggle="popover"]').each(function () {
-    var e = "";
-    $(this).data("color") && (e = "popover-" + $(this).data("color")), $(this).popover({
-      trigger: "focus",
-      template: '<div class="popover ' + e + '" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
-    })
-  });
-  $('[data-toggle="tooltip"]').tooltip();
-
 });
