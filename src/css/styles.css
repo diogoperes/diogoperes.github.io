@@ -142,13 +142,13 @@ html, body {
   transform: translateY(-50%);
 }
 
-.arrow {
+#sd-container .arrow {
   position: relative;
   width: 60px;
   height: 30px;
   opacity: 0;
 }
-.arrow::before, .arrow::after {
+#sd-container .arrow::before, #sd-container .arrow::after {
   content: "";
   width: 30px;
   height: 3px;
@@ -156,21 +156,21 @@ html, body {
   border-radius: 3px;
   display: inline-block;
 }
-.arrow::before {
+#sd-container .arrow::before {
   -webkit-transform: rotate(45deg) translateX(25%);
   transform: rotate(45deg) translateX(25%);
 }
-.arrow::after {
+#sd-container .arrow::after {
   -webkit-transform: rotate(-45deg) translateX(-25%);
   transform: rotate(-45deg) translateX(-25%);
 }
-.arrow:nth-child(1) {
+#sd-container .arrow:nth-child(1) {
   top: -50px;
   opacity: 1;
   -webkit-animation: arrow2 1s ease 0s infinite;
   animation: arrow2 1s ease 0s infinite;
 }
-.arrow:nth-child(2) {
+#sd-container .arrow:nth-child(2) {
   top: -25px;
   -webkit-animation: arrow1 1s ease 0.25s infinite;
   animation: arrow1 1s ease 0.25s infinite;
