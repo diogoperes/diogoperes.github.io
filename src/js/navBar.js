@@ -68,7 +68,8 @@ $(document).ready(function() {
       let sectionTop = $(sections[i]).position().top;
       let sectionBottom = sectionTop + $(sections[i]).height();
       // let userLookingPosition = $(elementWithScroll).scrollTop() + window.innerHeight / 2;
-      let userLookingPosition = (window.innerHeight * 2) / 3 ;
+      // let userLookingPosition = (window.innerHeight * 2) / 3 ;
+      let userLookingPosition = window.innerHeight / 2 + 50;
       //section with focus
       if (userLookingPosition >= sectionTop && userLookingPosition <= sectionBottom) {
         let aSelected = $("a[href='#" + $(sections[i])[0].id + "']");
